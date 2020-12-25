@@ -9,6 +9,8 @@ import random
 import string
 import pytesseract
 
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+
 # Adding path to config
 app.config['INITIAL_FILE_UPLOADS'] = 'app/static/uploads'
 
