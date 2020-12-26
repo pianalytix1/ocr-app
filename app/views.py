@@ -9,16 +9,8 @@ import random
 import string
 import pytesseract
 import requests
-# Downloading tesseract-ocr file
-r = requests.get("https://raw.githubusercontent.com/tesseract-ocr/tessdata/4.00/ind.traineddata", stream = True)  
-  
-# Writing data to file to avoid path isuues
-with open(".apt/usr/share/tesseract-ocr/4.00/tessdata/ind.traineddata", "wb") as file:  
-    for block in r.iter_content(chunk_size = 1024): 
-         if block:  
-             file.write(block)
 
-pytesseract.pytesseract.tesseract_cmd = '.apt/usr/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 # Adding path to config
 app.config['INITIAL_FILE_UPLOADS'] = 'app/static/uploads'
