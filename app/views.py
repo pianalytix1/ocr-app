@@ -13,7 +13,7 @@ import requests
 r = requests.get("https://raw.githubusercontent.com/tesseract-ocr/tessdata/4.00/ind.traineddata", stream = True)  
   
 # Writing data to file to avoid path isuues
-with open(".apt/usr/share/tesseract-ocr/4.00/tessdata/eng.traineddata", "wb") as file:  
+with open(".apt/usr/share/tesseract-ocr/4.00/tessdata/ind.traineddata", "wb") as file:  
     for block in r.iter_content(chunk_size = 1024): 
          if block:  
              file.write(block)
