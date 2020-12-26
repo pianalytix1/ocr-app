@@ -7,6 +7,13 @@ import numpy as np
 from PIL import Image
 import random
 import string
+import requests
+r = requests.get("https://raw.githubusercontent.com/tesseract-ocr/tessdata/4.00/ind.traineddata", stream = True)    
+with open("/usr/share/tesseract-ocr/4.00/tessdata/ind.traineddata", "wb") as file:  
+    for block in r.iter_content(chunk_size = 1024): 
+         if block:  
+             file.write(block)
+! apt install tesseract-ocr libtesseract-dev libmagickwand-dev
 import pytesseract
 
 #pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
