@@ -10,7 +10,7 @@ import string
 import pytesseract
 import requests
 
-pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+#pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 # Adding path to config
 app.config['INITIAL_FILE_UPLOADS'] = 'app/static/uploads'
