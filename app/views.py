@@ -14,6 +14,7 @@ with open("/usr/share/tesseract-ocr/4.00/tessdata/ind.traineddata", "wb") as fil
          if block:  
              file.write(block)
 ! apt install tesseract-ocr libtesseract-dev libmagickwand-dev
+! pip install pytesseract wand opencv-python
 import pytesseract
 
 #pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
